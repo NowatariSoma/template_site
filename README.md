@@ -1,46 +1,153 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Template Site - README
 
-## Available Scripts
+## 概要
 
-In the project directory, you can run:
+**Template Site** は、**React**、**TypeScript**、および **Material-UI (MUI)** を使用して作成された、ビジネス紹介ページです。このプロジェクトは、企業やサービスをモダンでレスポンシブなデザインで紹介するために構築されており、シンプルかつ直感的なユーザーインターフェースを提供します。
 
-### `npm start`
+![Template Site のスクリーンショット](./public/images/business-intro.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 特徴
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **レスポンシブデザイン**：MUIのグリッドシステムを使用して、モバイルデバイスからデスクトップまで幅広いデバイスに対応。
+- **簡潔なデザイン**：シンプルでわかりやすいUI。
+- **ビジネス紹介セクション**：サービス紹介とチーム紹介。
+- **TypeScript** による型安全なコーディング。
+- **Atomic Design** に基づくコンポーネント設計。
 
-### `npm test`
+## プロジェクトのセットアップ
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 必要な環境
 
-### `npm run build`
+プロジェクトを実行するには、以下の環境が必要です：
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (バージョン 14.x 以上)
+- npm (バージョン 6.x 以上) または yarn
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### インストール
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. このリポジトリをクローンします：
 
-### `npm run eject`
+   ```bash
+   git clone https://github.com/your-username/template-site.git
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. プロジェクトディレクトリに移動します：
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   cd template-site
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3. 依存関係をインストールします：
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   npmを使用する場合：
+   ```bash
+   npm install
+   ```
 
-## Learn More
+   yarnを使用する場合：
+   ```bash
+   yarn install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 開発サーバーの起動
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+npmを使用する場合：
+```bash
+npm start
+```
+
+yarnを使用する場合：
+```bash
+yarn start
+```
+
+これで、アプリケーションは `http://localhost:3000` で起動します。
+
+### プロダクションビルドの作成
+
+プロダクション向けのビルドを作成するには、以下のコマンドを実行します：
+
+npmを使用する場合：
+```bash
+npm run build
+```
+
+yarnを使用する場合：
+```bash
+yarn build
+```
+
+ビルド成果物は `build/` ディレクトリに生成されます。
+
+## ディレクトリ構成
+
+```bash
+/project_root/
+├── public/
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── images/
+│   │   └── business-intro-screenshot.png
+│   └── robots.txt
+├── src/
+│   ├── components/
+│   │   ├── atoms/
+│   │   │   ├── Button.tsx
+│   │   │   └── Typography.tsx
+│   │   ├── molecules/
+│   │   │   └── ServiceCard.tsx
+│   │   ├── organisms/
+│   │   │   ├── Header.tsx
+│   │   │   └── BusinessSection.tsx
+│   ├── styles/
+│   │   └── globalStyles.css
+│   ├── utils/
+│   │   ├── constants.ts
+│   │   └── validation.ts
+│   ├── App.tsx
+│   ├── index.tsx
+│   └── main.tsx
+├── README.md
+├── tsconfig.json
+├── package.json
+└── yarn.lock (または package-lock.json)
+```
+
+## 主なコンポーネント
+
+1. **`Header.tsx`** - ページ上部に表示されるナビゲーションバー。
+2. **`BusinessSection.tsx`** - 会社のサービスを紹介するメインコンテンツ。
+3. **`ServiceCard.tsx`** - 各サービスを表示するカードコンポーネント。
+4. **`BusinessPage.tsx`** - 全体のビジネス紹介ページ。
+5. **`globalStyles.css`** - プロジェクト全体のグローバルなCSSスタイル。
+
+## 使用技術
+
+- **React**：ユーザーインターフェースを構築するJavaScriptライブラリ。
+- **TypeScript**：JavaScriptの型付きスーパーセット。
+- **Material-UI (MUI)**：GoogleのMaterial Designに基づくUIコンポーネントライブラリ。
+- **CSS**：スタイリングとレイアウトのためのカスタムCSS。
+
+## カスタマイズ
+
+### ビジネス情報の変更
+
+ビジネス名、サービス、チームメンバーなどの内容をカスタマイズするには、`src/components` フォルダ内の対応するコンポーネントを編集してください。
+
+- **サービスの変更**：`ServiceCard.tsx` や `BusinessSection.tsx` を編集。
+- **チームメンバー**：チーム紹介セクションに必要な情報を追加。
+
+### 新しいコンポーネントの追加
+
+新しいセクションや機能を追加する場合は、**Atomic Design** の原則に従い、適切なフォルダ（atoms, molecules, organismsなど）に新しいコンポーネントを作成してください。
+
+## 今後の改善点
+
+- **コンタクトフォーム**：問い合わせ用のコンタクトフォームを追加。
+- **アニメーション**：スムーズなトランジションやアニメーションの追加。
+- **SEO最適化**：メタタグやOpenGraphタグを追加してSEOを強化。
+
+## ライセンス
+
+このプロジェクトは [MIT License](LICENSE) の下で公開されています。
